@@ -28,10 +28,6 @@ on:
       - "autogpt_platform/backend/migrations/**"
       - "autogpt_platform/backend/test/**"
       - ".github/workflows/platform-preview-seed-fixture.yml"
-  schedule:
-    # Weekly backstop (Mondays 06:00 UTC) so the fixture never goes stale even
-    # if no migration/test change lands for a while.
-    - cron: "0 6 * * 1"
   workflow_dispatch:
 
 # Coalesce overlapping bakes: a newer commit cancels an in-flight bake since
