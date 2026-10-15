@@ -9,10 +9,6 @@ on:
     types: [opened, synchronize, reopened]
   
   # Scheduled sweep - check stale PRs daily
-  schedule:
-    - cron: '0 9 * * *'  # 9 AM UTC daily
-  
-  # Manual trigger for testing
   workflow_dispatch:
     inputs:
       pr_number:
